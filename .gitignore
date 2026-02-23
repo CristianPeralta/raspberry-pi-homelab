@@ -1,0 +1,14 @@
+# Secrets
+.env
+*.key
+*.pem
+
+# Service data (volumes)
+**/data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

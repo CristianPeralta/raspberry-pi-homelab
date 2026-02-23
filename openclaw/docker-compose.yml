@@ -1,0 +1,13 @@
+services:
+  openclaw:
+    image: ghcr.io/openclaw-ai/openclaw:latest
+    container_name: openclaw
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      - DEFAULT_MODEL=claude-sonnet-4-20250514
