@@ -1,0 +1,13 @@
+[Unit]
+Description=LAN Ping Scanner HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+User=cristian
+ExecStart=/usr/bin/python3 /home/cristian/homelab/openclaw/custom-skills/wifi-devices/scripts/ping-server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -3,8 +3,15 @@
 *.key
 *.pem
 
-# Service data (volumes)
+# Service data (volumes, DBs)
 **/data/
+*.db
+
+# AdGuard runtime config (contains password hashes)
+adguard/confdir/
+
+# Legacy files
+bt-devices.json
 
 # OS
 .DS_Store

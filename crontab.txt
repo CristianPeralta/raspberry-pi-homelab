@@ -1,0 +1,3 @@
+# Homelab scans - alimentan historial SQLite (sin tokens)
+*/5 * * * * curl -s http://127.0.0.1:8888/scan > /dev/null 2>&1
+*/30 * * * * curl -s http://127.0.0.1:8888/bt-scan > /dev/null 2>&1
