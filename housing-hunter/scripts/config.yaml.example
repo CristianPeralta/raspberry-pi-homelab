@@ -1,0 +1,68 @@
+# Housing Hunter — Configuration template
+# Copy to config.yaml and fill in your values.
+
+# Search parameters
+search:
+  ciudad: your-city
+  alquiler:
+    precio_max_pen: 1000
+    tipos: [casa, departamento]
+    requisitos: [mascotas, patio]
+  venta:
+    precio_min_usd: 10000
+    precio_max_usd: 50000
+    tipos: [terreno, lote, casa]
+
+# Districts of interest
+distritos:
+  - district-1
+  - district-2
+  - district-3
+
+# District aliases (map common names to canonical district name)
+distrito_aliases:
+  alias1: District Name
+  alias2: District Name
+
+# Portal URLs for scraping
+portales:
+  nestoria:
+    - url: https://www.nestoria.pe/your-city/casas/alquiler?price_max=1000
+      modo: alquiler
+    - url: https://www.nestoria.pe/your-city/terrenos/venta
+      modo: venta
+  laencontre:
+    - url: https://www.laencontre.com.pe/alquiler/casas-y-departamentos/your-city
+      modo: alquiler
+  properati:
+    - url: https://www.properati.com.pe/s/your-city/departamento/alquiler
+      modo: alquiler
+  urbania:
+    - url: https://urbania.pe/buscar/alquiler-de-casas-en-your-city
+      modo: alquiler
+
+# Peruvian portals (JSON-based)
+portales_pe:
+  ubicasa:
+    - url: https://ubicasa.pe/alquiler/all/your-city-region
+      modo: alquiler
+  infocasas:
+    - url: https://www.infocasas.com.pe/alquiler/inmuebles/your-city
+      modo: alquiler
+
+# Facebook groups to monitor (requires fb_cookies.txt)
+facebook_groups:
+  - id: your-group-id-or-slug
+    name: "Group Name"
+    modo: alquiler  # alquiler | venta | ambos
+
+# Local newspapers
+periodicos:
+  local_paper:
+    web: https://your-local-newspaper.com/classifieds/
+
+# Dashboard output settings
+dashboard:
+  presupuesto_alquiler: "max S/ 1,000/mes"
+  presupuesto_compra: "$10,000 - $50,000 USD"
+  fecha_inicio: "2026-01-01"

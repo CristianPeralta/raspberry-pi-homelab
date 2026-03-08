@@ -1,0 +1,5 @@
+scripts/.env
+scripts/config.yaml
+scripts/fb_cookies.txt
+scripts/logs/
+db/housing.db
