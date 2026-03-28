@@ -1,3 +1,6 @@
 # Homelab scans - alimentan historial SQLite (sin tokens)
-*/5 * * * * curl -s http://127.0.0.1:8888/scan > /dev/null 2>&1
+*/5 * * * * curl -s http://127.0.0.1:8888/scan > /dev/null 2>&1 && /home/cristian/homelab/monitor/run-monitor.sh >> /tmp/homelab-monitor.log 2>&1
 */30 * * * * curl -s http://127.0.0.1:8888/bt-scan > /dev/null 2>&1
+
+# Benchmark — captura reacciones emoji de Telegram cada 10 min
+*/10 * * * * cd /home/cristian/homelab/benchmark && python3 reaction-collector.py >> /tmp/reaction-collector.log 2>&1
